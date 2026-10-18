@@ -17,6 +17,15 @@
     --header-text: #e0e0e0;
 }
 
+/* Regras de Idioma */
+body.lang-en .lang-pt {
+    display: none !important;
+}
+
+body.lang-pt .lang-en {
+    display: none !important;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
@@ -39,6 +48,13 @@ header {
     text-align: center;
 }
 
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
 .btn {
     background-color: var(--card-bg);
     color: var(--primary-color);
@@ -48,8 +64,6 @@ header {
     border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
 }
 
 .cards-grid {

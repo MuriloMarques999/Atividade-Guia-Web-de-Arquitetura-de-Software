@@ -8,42 +8,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="lang-pt">
     <header>
         <div class="container">
-            <h1>Guia Web de Arquitetura de Software</h1>
-            <p>SENAI EAD - Gestão de Projetos (4º Semestre ADS)</p>
-            <button id="theme-toggle" class="btn">Alternar Tema (Dark/Light)</button>
+            <h1 class="lang-pt">Guia Web de Arquitetura de Software</h1>
+            <h1 class="lang-en">Software Architecture Web Guide</h1>
+
+            <p class="lang-pt">SENAI EAD - Gestão de Projetos (4º Semestre ADS)</p>
+            <p class="lang-en">SENAI EAD - Project Management (4th Semester ADS)</p>
+
+            <div class="controls">
+                <button id="theme-toggle" class="btn">
+                    <span class="lang-pt">Alternar Tema (Claro/Escuro)</span>
+                    <span class="lang-en">Toggle Theme (Light/Dark)</span>
+                </button>
+                <button id="lang-toggle" class="btn">EN / PT-BR</button>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <section class="team-info">
-            <h2>Identificação da Equipe</h2>
+            <h2 class="lang-pt">Identificação da Equipe</h2>
+            <h2 class="lang-en">Team Identification</h2>
             <ul>
-                <li><strong>Membro:</strong> Murilo Marques Dantas Vieira</li>
+                <li><strong><span class="lang-pt">Membros:</span><span class="lang-en">Members:</span></strong> Murilo
+                    Marques Dantas Vieira, João Vitor Nogueira Alves</li>
             </ul>
         </section>
 
         <section class="posts-links">
-            <h2>Conceitos Abordados</h2>
+            <h2 class="lang-pt">Conceitos Abordados</h2>
+            <h2 class="lang-en">Covered Concepts</h2>
+
             <div class="cards-grid">
                 <a href="microservices.html" class="card">
-                    <h3>Eixo 1: Microsserviços</h3>
-                    <p>Artigo: Microservices</p>
+                    <h3 class="lang-pt">Eixo 1: Microsserviços</h3>
+                    <h3 class="lang-en">Axis 1: Microservices</h3>
+                    <p class="lang-pt">Artigo: Microservices</p>
+                    <p class="lang-en">Article: Microservices</p>
                 </a>
                 <a href="micro-frontends.html" class="card">
-                    <h3>Eixo 2: Fronteiras e Evolução</h3>
-                    <p>Artigo: Micro Frontends</p>
+                    <h3 class="lang-pt">Eixo 2: Fronteiras e Evolução</h3>
+                    <h3 class="lang-en">Axis 2: Boundaries and Evolution</h3>
+                    <p class="lang-pt">Artigo: Micro Frontends</p>
+                    <p class="lang-en">Article: Micro Frontends</p>
                 </a>
                 <a href="serverless.html" class="card">
-                    <h3>Eixo 3: Camadas e Execução</h3>
-                    <p>Artigo: Serverless Architectures</p>
+                    <h3 class="lang-pt">Eixo 3: Camadas e Execução</h3>
+                    <h3 class="lang-en">Axis 3: Layers and Execution</h3>
+                    <p class="lang-pt">Artigo: Serverless Architectures</p>
+                    <p class="lang-en">Article: Serverless Architectures</p>
                 </a>
             </div>
         </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 

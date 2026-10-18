@@ -4,54 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serverless - Eixo 3</title>
+    <title>Serverless Architectures</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="lang-pt">
     <header>
         <div class="container">
-            <h1>Eixo 3: Camadas e Execução</h1>
-            <a href="index.html" class="btn">← Voltar à Página Inicial</a>
+            <h1 class="lang-pt">Eixo 3: Camadas e Execução</h1>
+            <h1 class="lang-en">Axis 3: Layers and Execution</h1>
+
+            <a href="index.html" class="btn">
+                <span class="lang-pt">← Voltar à Página Inicial</span>
+                <span class="lang-en">← Back to Home Page</span>
+            </a>
+            <button id="lang-toggle" class="btn">EN / PT-BR</button>
         </div>
     </header>
 
     <main class="container">
         <article class="content-box">
-            <h2>Artigo: Serverless Architectures</h2>
+            <h2><span class="lang-pt">Artigo:</span><span class="lang-en">Article:</span> Serverless Architectures</h2>
 
-            <h3>Resumo da Ideia Central</h3>
-            <p>A arquitetura Serverless (Sem Servidor) refere-se a aplicações que dependem fortemente de serviços
-                terceirizados baseados na nuvem (Backend as a Service - BaaS) ou que executam código customizado em
-                contêineres efêmeros gerenciados integralmente pelo provedor de nuvem (Function as a Service - FaaS),
-                eliminando a necessidade de gerenciar servidores físicos ou virtuais.</p>
+            <h3 class="lang-pt">Resumo da Ideia Central</h3>
+            <h3 class="lang-en">Core Idea Summary</h3>
 
-            <h3>Vantagens e Desvantagens</h3>
+            <p class="lang-pt">A arquitetura Serverless (Sem Servidor) refere-se a aplicações que dependem de serviços
+                terceirizados baseados na nuvem (BaaS) ou que executam código em contêineres efêmeros gerenciados pelo
+                provedor (FaaS), eliminando a gestão de servidores virtuais ou físicos.</p>
+            <p class="lang-en">Serverless architecture refers to applications that rely on third-party cloud-based
+                services (BaaS) or that run code in ephemeral containers managed by the provider (FaaS), eliminating the
+                management of virtual or physical servers.</p>
+
+            <h3 class="lang-pt">Vantagens e Desvantagens</h3>
+            <h3 class="lang-en">Advantages and Disadvantages</h3>
+
             <ul>
-                <li><strong>Vantagens:</strong> Eliminação do gerenciamento de infraestrutura, escalabilidade nativa com
-                    modelo de cobrança focado estritamente no que é executado (escala a zero), e foco total na lógica de
-                    negócio.</li>
-                <li><strong>Desvantagens:</strong> Extrema dependência do provedor de nuvem escolhido (vendor lock-in),
-                    dificuldade em emular o ambiente de produção para testes locais e problemas de latência na
-                    inicialização ("cold starts").</li>
+                <li class="lang-pt"><strong>Vantagens:</strong> Foco total na lógica de negócio, escalabilidade nativa
+                    com modelo de cobrança focado estritamente no que é executado (escala a zero).</li>
+                <li class="lang-en"><strong>Advantages:</strong> Total focus on business logic, native scalability with
+                    a billing model strictly focused on what is executed (scale to zero).</li>
+
+                <li class="lang-pt"><strong>Desvantagens:</strong> Extrema dependência do provedor de nuvem escolhido
+                    (vendor lock-in) e problemas de latência na inicialização ("cold starts").</li>
+                <li class="lang-en"><strong>Disadvantages:</strong> Extreme dependence on the chosen cloud provider
+                    (vendor lock-in) and latency issues during initialization ("cold starts").</li>
             </ul>
 
-            <h3>Impacto na Gestão do Projeto</h3>
+            <h3 class="lang-pt">Impacto na Gestão do Projeto</h3>
+            <h3 class="lang-en">Impact on Project Management</h3>
+
             <ul class="impact-list">
-                <li><strong>Prazo:</strong> Acelera dramaticamente a implementação inicial e o lançamento do projeto,
-                    pois retira as tarefas demoradas de configuração de redes, máquinas e camadas de execução.</li>
-                <li><strong>Custo:</strong> Altera o modelo de custos de fixo para altamente variável (pay-per-request).
-                    Pode ser extremamente econômico no início, mas imprevisível se a aplicação sofrer picos massivos de
-                    tráfego.</li>
-                <li><strong>Equipe:</strong> Reduz drasticamente a necessidade de ter profissionais especializados em
-                    administração de sistemas (SysAdmins/Operações) na equipe de desenvolvimento.</li>
-                <li><strong>Riscos:</strong> Elevado risco estratégico de "aprisionamento" a uma nuvem específica (AWS,
-                    Azure, etc.). Se as regras comerciais do provedor mudarem, o projeto poderá sofrer grandes impactos.
-                </li>
+                <li class="lang-pt"><strong>Prazo:</strong> Acelera dramaticamente a implementação inicial, retirando
+                    tarefas demoradas de configuração de máquinas.</li>
+                <li class="lang-en"><strong>Timeframe:</strong> Dramatically accelerates initial implementation,
+                    removing time-consuming machine configuration tasks.</li>
+
+                <li class="lang-pt"><strong>Custo:</strong> Altera o modelo de custos de fixo para altamente variável
+                    (pay-per-request). Econômico no início, mas imprevisível em picos.</li>
+                <li class="lang-en"><strong>Cost:</strong> Changes the cost model from fixed to highly variable
+                    (pay-per-request). Economical at first, but unpredictable during spikes.</li>
+
+                <li class="lang-pt"><strong>Equipe:</strong> Reduz drasticamente a necessidade de profissionais de
+                    infraestrutura (SysAdmins/Operações) na equipe.</li>
+                <li class="lang-en"><strong>Team:</strong> Drastically reduces the need for infrastructure professionals
+                    (SysAdmins/Ops) on the team.</li>
+
+                <li class="lang-pt"><strong>Riscos:</strong> Risco estratégico de aprisionamento tecnológico (vendor
+                    lock-in). Mudanças comerciais do provedor afetam o projeto diretamente.</li>
+                <li class="lang-en"><strong>Risks:</strong> Strategic risk of technological lock-in. Provider's
+                    commercial changes directly affect the project.</li>
             </ul>
 
-            <a href="https://martinfowler.com/articles/serverless.html" target="_blank" class="link-original">🔗 Ler o
-                post original de Martin Fowler</a>
+            <a href="https://martinfowler.com/articles/serverless.html" target="_blank" class="link-original">
+                <span class="lang-pt">🔗 Ler o post original de Martin Fowler</span>
+                <span class="lang-en">🔗 Read the original post by Martin Fowler</span>
+            </a>
         </article>
     </main>
     <script src="script.js"></script>
