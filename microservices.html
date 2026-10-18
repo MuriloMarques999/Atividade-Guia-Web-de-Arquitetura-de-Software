@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsserviços - Eixo 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Eixo 1: Microsserviços</h1>
+            <a href="index.html" class="btn">← Voltar à Página Inicial</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="content-box">
+            <h2>Artigo: Microservices</h2>
+
+            <h3>Resumo da Ideia Central</h3>
+            <p>O estilo arquitetural de microsserviços consiste em desenvolver uma única aplicação como um conjunto de
+                pequenos serviços. Cada serviço é executado em seu próprio processo, focado em uma capacidade de negócio
+                específica (business capability) e se comunica por meio de mecanismos leves. Possuem implantação
+                (deploy) independente e gerenciamento de dados descentralizado.</p>
+
+            <h3>Vantagens e Desvantagens</h3>
+            <ul>
+                <li><strong>Vantagens:</strong> Escalabilidade direcionada (escala-se apenas o serviço necessário),
+                    independência tecnológica (cada serviço pode usar uma linguagem ou banco de dados diferente) e
+                    ciclos de publicação mais rápidos e independentes.</li>
+                <li><strong>Desvantagens:</strong> Alta complexidade operacional no gerenciamento de sistemas
+                    distribuídos, dificuldade em manter a consistência dos dados em toda a rede e necessidade imperativa
+                    de automação madura (DevOps/CI/CD).</li>
+            </ul>
+
+            <h3>Impacto na Gestão do Projeto</h3>
+            <ul class="impact-list">
+                <li><strong>Prazo:</strong> O tempo de configuração inicial (setup) é maior, mas a longo prazo permite
+                    entregas mais rápidas, já que equipes paralelas não bloqueiam o trabalho umas das outras.</li>
+                <li><strong>Custo:</strong> Aumenta os custos com infraestrutura (múltiplos servidores/contêineres) e
+                    exige investimento em ferramentas de monitoramento robustas.</li>
+                <li><strong>Equipe:</strong> Requer equipes multidisciplinares (cross-functional) e autônomas. Cada
+                    equipe deve assumir a responsabilidade total pela criação e operação do seu serviço ("you build it,
+                    you run it").</li>
+                <li><strong>Riscos:</strong> Riscos elevados associados a falhas de comunicação na rede, latência e
+                    integração. Requer estratégias complexas de mitigação para evitar falhas em cascata.</li>
+            </ul>
+
+            <a href="https://martinfowler.com/articles/microservices.html" target="_blank" class="link-original">🔗 Ler
+                o post original de Martin Fowler</a>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

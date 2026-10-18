@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless - Eixo 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Eixo 3: Camadas e Execução</h1>
+            <a href="index.html" class="btn">← Voltar à Página Inicial</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="content-box">
+            <h2>Artigo: Serverless Architectures</h2>
+
+            <h3>Resumo da Ideia Central</h3>
+            <p>A arquitetura Serverless (Sem Servidor) refere-se a aplicações que dependem fortemente de serviços
+                terceirizados baseados na nuvem (Backend as a Service - BaaS) ou que executam código customizado em
+                contêineres efêmeros gerenciados integralmente pelo provedor de nuvem (Function as a Service - FaaS),
+                eliminando a necessidade de gerenciar servidores físicos ou virtuais.</p>
+
+            <h3>Vantagens e Desvantagens</h3>
+            <ul>
+                <li><strong>Vantagens:</strong> Eliminação do gerenciamento de infraestrutura, escalabilidade nativa com
+                    modelo de cobrança focado estritamente no que é executado (escala a zero), e foco total na lógica de
+                    negócio.</li>
+                <li><strong>Desvantagens:</strong> Extrema dependência do provedor de nuvem escolhido (vendor lock-in),
+                    dificuldade em emular o ambiente de produção para testes locais e problemas de latência na
+                    inicialização ("cold starts").</li>
+            </ul>
+
+            <h3>Impacto na Gestão do Projeto</h3>
+            <ul class="impact-list">
+                <li><strong>Prazo:</strong> Acelera dramaticamente a implementação inicial e o lançamento do projeto,
+                    pois retira as tarefas demoradas de configuração de redes, máquinas e camadas de execução.</li>
+                <li><strong>Custo:</strong> Altera o modelo de custos de fixo para altamente variável (pay-per-request).
+                    Pode ser extremamente econômico no início, mas imprevisível se a aplicação sofrer picos massivos de
+                    tráfego.</li>
+                <li><strong>Equipe:</strong> Reduz drasticamente a necessidade de ter profissionais especializados em
+                    administração de sistemas (SysAdmins/Operações) na equipe de desenvolvimento.</li>
+                <li><strong>Riscos:</strong> Elevado risco estratégico de "aprisionamento" a uma nuvem específica (AWS,
+                    Azure, etc.). Se as regras comerciais do provedor mudarem, o projeto poderá sofrer grandes impactos.
+                </li>
+            </ul>
+
+            <a href="https://martinfowler.com/articles/serverless.html" target="_blank" class="link-original">🔗 Ler o
+                post original de Martin Fowler</a>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

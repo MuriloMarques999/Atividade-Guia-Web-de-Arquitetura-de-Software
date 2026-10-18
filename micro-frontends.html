@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Frontends - Eixo 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Eixo 2: Fronteiras e Evolução</h1>
+            <a href="index.html" class="btn">← Voltar à Página Inicial</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="content-box">
+            <h2>Artigo: Micro Frontends</h2>
+
+            <h3>Resumo da Ideia Central</h3>
+            <p>Os Micro Frontends estendem os conceitos de microsserviços à camada de interface do usuário. Em vez de
+                construir uma aplicação web monolítica pesada no frontend, a interface é fragmentada em pedaços
+                independentes, que podem ser desenvolvidos, testados e publicados por equipes distintas, garantindo que
+                o acoplamento seja minimizado.</p>
+
+            <h3>Vantagens e Desvantagens</h3>
+            <ul>
+                <li><strong>Vantagens:</strong> Código-fonte menor e mais fácil de manter, atualizações e publicações
+                    independentes, e possibilidade de modernizar gradualmente uma aplicação legada sem precisar
+                    reescrever tudo.</li>
+                <li><strong>Desvantagens:</strong> Possibilidade de duplicação de dependências (aumentando o tamanho dos
+                    arquivos baixados pelo cliente), complexidade em compartilhar o estado global da aplicação e risco
+                    de fragmentação visual.</li>
+            </ul>
+
+            <h3>Impacto na Gestão do Projeto</h3>
+            <ul class="impact-list">
+                <li><strong>Prazo:</strong> Acelera o tempo de entrega das funcionalidades (time-to-market), pois
+                    elimina os gargalos de um frontend gerenciado por uma única equipe de interface.</li>
+                <li><strong>Custo:</strong> Pode introduzir custos adicionais (overhead) na criação da estrutura base
+                    (shell app) e na governança para evitar a duplicação excessiva de trabalho.</li>
+                <li><strong>Equipe:</strong> Permite a estruturação em equipes verticais e totalmente autônomas que
+                    gerenciam uma funcionalidade "de ponta a ponta", do backend até a interface do usuário.</li>
+                <li><strong>Riscos:</strong> Riscos inerentes à experiência do usuário (UX inconsistente) e problemas de
+                    desempenho no navegador devido ao excesso de pacotes JavaScript importados.</li>
+            </ul>
+
+            <a href="https://martinfowler.com/articles/micro-frontends.html" target="_blank" class="link-original">🔗
+                Ler o post original de Martin Fowler</a>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
