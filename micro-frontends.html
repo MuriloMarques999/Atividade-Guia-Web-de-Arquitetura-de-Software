@@ -30,32 +30,70 @@
 
             <h3 class="lang-pt">Resumo da Ideia Central</h3>
             <h3 class="lang-en">Core Idea Summary</h3>
-            <p class="lang-pt">Estende os conceitos de microsserviços à interface do usuário, fragmentando o frontend em
-                pedaços independentes gerenciados por times distintos.</p>
-            <p class="lang-en">Extends microservices concepts to the UI, fragmenting the frontend into independent
-                pieces managed by different teams.</p>
+            <p class="lang-pt">A arquitetura de Micro Frontends estende os benefícios e os conceitos dos microsserviços
+                diretamente para a interface do usuário (UI). Historicamente, mesmo com o backend dividido em serviços,
+                o frontend continuava sendo uma aplicação web monolítica única, grande e pesada (Single Page
+                Applications - SPAs). A ideia central aqui é fragmentar a interface em pedaços lógicos e independentes
+                (por exemplo: um cabeçalho de busca, um carrinho de compras e uma vitrine de produtos), permitindo que
+                sejam desenvolvidos, testados e publicados por equipes distintas que se integram no navegador do cliente
+                final.</p>
+            <p class="lang-en">The Micro Frontends architecture extends the benefits and concepts of microservices
+                directly to the user interface (UI). Historically, even with the backend divided into services, the
+                frontend remained a single, large, and heavy monolithic web application (Single Page Applications -
+                SPAs). The core idea here is to fragment the interface into logical and independent pieces (e.g., a
+                search header, a shopping cart, and a product showcase), allowing them to be developed, tested, and
+                published by different teams that integrate in the end client's browser.</p>
 
             <h3 class="lang-pt">Vantagens e Desvantagens</h3>
             <h3 class="lang-en">Pros & Cons</h3>
             <ul>
-                <li class="lang-pt"><strong>Vantagens:</strong> Código menor e modernização gradual.</li>
-                <li class="lang-en"><strong>Pros:</strong> Smaller code and gradual modernization.</li>
-                <li class="lang-pt"><strong>Desvantagens:</strong> Duplicação de dependências e risco de UX
-                    inconsistente.</li>
-                <li class="lang-en"><strong>Cons:</strong> Dependency duplication and risk of inconsistent UX.</li>
+                <li class="lang-pt"><strong>Vantagens:</strong> Resulta em bases de código menores e altamente coesas,
+                    facilitando a manutenção. Permite atualizações incrementais (você pode atualizar apenas o módulo do
+                    carrinho de compras sem mexer no resto da loja). Também é uma excelente estratégia para modernizar
+                    gradualmente sistemas legados, reescrevendo a interface tela por tela.</li>
+                <li class="lang-en"><strong>Pros:</strong> Results in smaller, highly cohesive codebases, making
+                    maintenance easier. Allows for incremental updates (you can update just the shopping cart module
+                    without touching the rest of the store). It is also an excellent strategy for gradually modernizing
+                    legacy systems, rewriting the interface screen by screen.</li>
+                <li class="lang-pt"><strong>Desvantagens:</strong> O tamanho final dos arquivos processados no navegador
+                    do cliente (payload) pode aumentar drasticamente devido à duplicação de dependências (ex: dois micro
+                    frontends carregando versões diferentes da biblioteca React). Além disso, compartilhar informações
+                    (estado) entre os componentes se torna um desafio arquitetural complexo.</li>
+                <li class="lang-en"><strong>Cons:</strong> The final payload size processed in the client's browser can
+                    increase dramatically due to duplicate dependencies (e.g., two micro frontends loading different
+                    versions of the React library). Additionally, sharing state between components becomes a complex
+                    architectural challenge.</li>
             </ul>
 
             <h3 class="lang-pt">Impacto na Gestão do Projeto</h3>
             <h3 class="lang-en">Impact on Project Management</h3>
             <ul class="impact-list">
-                <li class="lang-pt"><strong>Prazo:</strong> Acelera o time-to-market.</li>
-                <li class="lang-en"><strong>Timeframe:</strong> Accelerates time-to-market.</li>
-                <li class="lang-pt"><strong>Custo:</strong> Custos de overhead na criação do shell app.</li>
-                <li class="lang-en"><strong>Cost:</strong> Overhead costs in shell app creation.</li>
-                <li class="lang-pt"><strong>Equipe:</strong> Estrutura vertical "de ponta a ponta".</li>
-                <li class="lang-en"><strong>Team:</strong> End-to-end vertical structure.</li>
-                <li class="lang-pt"><strong>Riscos:</strong> Problemas de performance no navegador.</li>
-                <li class="lang-en"><strong>Risks:</strong> Browser performance issues.</li>
+                <li class="lang-pt"><strong>Prazo:</strong> Reduz dramaticamente o "Time-to-Market" (tempo até o
+                    lançamento). Ao remover o frontend como um gargalo onde todas as equipes precisavam sincronizar o
+                    código, as entregas de valor para o cliente final se tornam contínuas e isoladas.</li>
+                <li class="lang-en"><strong>Timeframe:</strong> Dramatically reduces "Time-to-Market". By removing the
+                    frontend as a bottleneck where all teams needed to synchronize code, value deliveries to the end
+                    client become continuous and isolated.</li>
+                <li class="lang-pt"><strong>Custo:</strong> Pode haver um aumento no orçamento inicial para criar a
+                    aplicação "casca" (shell app) responsável por rotear e organizar os micro frontends na tela, além do
+                    custo de estabelecer padrões de governança rigorosos.</li>
+                <li class="lang-en"><strong>Cost:</strong> There may be an increase in the initial budget to create the
+                    "shell app" responsible for routing and organizing the micro frontends on the screen, as well as the
+                    cost of establishing strict governance standards.</li>
+                <li class="lang-pt"><strong>Equipe:</strong> O principal ganho gerencial é a formação de equipes
+                    realmente "Ponta a Ponta" (End-to-End). A equipe que gerencia o catálogo de produtos passa a ser
+                    dona do banco de dados, da API e da interface visual do catálogo, tendo autonomia total sobre sua
+                    área de atuação.</li>
+                <li class="lang-en"><strong>Team:</strong> The main managerial gain is the formation of truly End-to-End
+                    teams. The team managing the product catalog becomes the owner of the database, the API, and the
+                    visual interface of the catalog, having complete autonomy over their domain.</li>
+                <li class="lang-pt"><strong>Riscos:</strong> O maior risco de projeto é a perda de consistência visual
+                    (UX/UI Frankenstein), onde diferentes partes do site parecem ter sido feitas por empresas
+                    diferentes. É necessário um forte sistema de design (Design System) unificado para mitigar esse
+                    risco.</li>
+                <li class="lang-en"><strong>Risks:</strong> The biggest project risk is the loss of visual consistency
+                    (Frankenstein UX/UI), where different parts of the site look like they were made by different
+                    companies. A strong, unified Design System is required to mitigate this risk.</li>
             </ul>
 
             <a href="https://martinfowler.com/articles/micro-frontends.html" target="_blank" class="link-original">

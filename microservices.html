@@ -30,37 +30,73 @@
 
             <h3 class="lang-pt">Resumo da Ideia Central</h3>
             <h3 class="lang-en">Core Idea Summary</h3>
-            <p class="lang-pt">O estilo arquitetural de microsserviços consiste em desenvolver uma única aplicação como
-                um conjunto de pequenos serviços autônomos e focados em negócios específicos.</p>
-            <p class="lang-en">The microservices architectural style consists of developing a single application as a
-                suite of small, autonomous services focused on specific business capabilities.</p>
+            <p class="lang-pt">O estilo arquitetural de microsserviços propõe a construção de uma aplicação como um
+                conjunto de serviços pequenos e independentes. Ao invés de um grande bloco monolítico onde todo o código
+                reside no mesmo lugar, cada serviço executa seu próprio processo e se comunica por meio de APIs leves
+                (geralmente HTTP/REST). Eles são organizados em torno de capacidades de negócio específicas (como
+                "pagamentos", "estoque" ou "usuários") e possuem rotinas de implantação (deploy) totalmente
+                automatizadas. Uma característica vital é a gestão de dados descentralizada: cada microsserviço gerencia
+                seu próprio banco de dados, garantindo que o sistema tenha um baixo nível de acoplamento.</p>
+            <p class="lang-en">The microservices architectural style proposes building an application as a suite of
+                small, independent services. Instead of a large monolithic block where all code resides together, each
+                service runs its own process and communicates via lightweight APIs (usually HTTP/REST). They are
+                organized around specific business capabilities (like "payments", "inventory", or "users") and have
+                fully automated deployment routines. A vital characteristic is decentralized data management: each
+                microservice manages its own database, ensuring the system has a low level of coupling.</p>
 
             <h3 class="lang-pt">Vantagens e Desvantagens</h3>
             <h3 class="lang-en">Pros & Cons</h3>
             <ul>
-                <li class="lang-pt"><strong>Vantagens:</strong> Escalabilidade direcionada, independência tecnológica e
-                    ciclos rápidos.</li>
-                <li class="lang-en"><strong>Pros:</strong> Targeted scalability, technological independence, and fast
-                    cycles.</li>
-                <li class="lang-pt"><strong>Desvantagens:</strong> Complexidade em sistemas distribuídos e necessidade
-                    de automação madura.</li>
-                <li class="lang-en"><strong>Cons:</strong> Complexity in distributed systems and the need for mature
-                    automation.</li>
+                <li class="lang-pt"><strong>Vantagens:</strong> Permite a escalabilidade independente (apenas o serviço
+                    que está sofrendo sobrecarga recebe mais recursos de servidor), facilita o isolamento de falhas (um
+                    erro no serviço de e-mail não derruba o sistema de vendas) e possibilita a diversidade tecnológica,
+                    onde cada equipe escolhe a melhor linguagem de programação ou banco de dados para resolver o seu
+                    problema específico.</li>
+                <li class="lang-en"><strong>Pros:</strong> Allows independent scalability (only the service experiencing
+                    heavy load receives more server resources), facilitates fault isolation (an error in the email
+                    service won't crash the sales system), and enables technological diversity, where each team chooses
+                    the best programming language or database for their specific problem.</li>
+                <li class="lang-pt"><strong>Desvantagens:</strong> Traz uma enorme complexidade operacional típica de
+                    sistemas distribuídos. Há dificuldades extremas no rastreamento de bugs que cruzam vários serviços,
+                    latência de rede nas comunicações internas e a necessidade de lidar com a "consistência eventual"
+                    dos dados, em vez de transações rígidas de bancos relacionais tradicionais.</li>
+                <li class="lang-en"><strong>Cons:</strong> Brings enormous operational complexity typical of distributed
+                    systems. There are extreme difficulties in tracking bugs that cross multiple services, network
+                    latency in internal communications, and the need to deal with "eventual consistency" of data, rather
+                    than strict transactions of traditional relational databases.</li>
             </ul>
 
             <h3 class="lang-pt">Impacto na Gestão do Projeto</h3>
             <h3 class="lang-en">Impact on Project Management</h3>
             <ul class="impact-list">
-                <li class="lang-pt"><strong>Prazo:</strong> Setup inicial maior, mas entregas futuras mais rápidas por
-                    não haver bloqueio entre equipes.</li>
-                <li class="lang-en"><strong>Timeframe:</strong> Higher initial setup, but faster future deliveries due
-                    to unblocked parallel teams.</li>
-                <li class="lang-pt"><strong>Custo:</strong> Aumento em infraestrutura e monitoramento.</li>
-                <li class="lang-en"><strong>Cost:</strong> Increase in infrastructure and monitoring.</li>
-                <li class="lang-pt"><strong>Equipe:</strong> Exige times multidisciplinares e altamente autônomos.</li>
-                <li class="lang-en"><strong>Team:</strong> Requires cross-functional, highly autonomous teams.</li>
-                <li class="lang-pt"><strong>Riscos:</strong> Falhas de rede e latência.</li>
-                <li class="lang-en"><strong>Risks:</strong> Network failures and latency.</li>
+                <li class="lang-pt"><strong>Prazo:</strong> O tempo inicial de configuração (setup de infraestrutura,
+                    Kubernetes e pipelines de CI/CD) é substancialmente maior. Contudo, em médio e longo prazo, o ciclo
+                    de vida do projeto acelera drasticamente, pois múltiplas equipes podem atualizar e publicar suas
+                    partes do sistema simultaneamente, sem gerar conflitos ou depender de uma única "janela de
+                    lançamento" (release).</li>
+                <li class="lang-en"><strong>Timeframe:</strong> The initial setup time (infrastructure, Kubernetes, and
+                    CI/CD pipelines) is substantially higher. However, in the medium to long term, the project lifecycle
+                    accelerates drastically, as multiple teams can update and deploy their parts of the system
+                    simultaneously, without causing conflicts or relying on a single release window.</li>
+                <li class="lang-pt"><strong>Custo:</strong> Há um aumento considerável nos custos de infraestrutura em
+                    nuvem, ferramentas de monitoramento avançado e orquestração. Além disso, exige profissionais mais
+                    caros e especializados.</li>
+                <li class="lang-en"><strong>Cost:</strong> There is a considerable increase in cloud infrastructure
+                    costs, advanced monitoring tools, and orchestration. It also requires more expensive and specialized
+                    professionals.</li>
+                <li class="lang-pt"><strong>Equipe:</strong> Exige uma mudança cultural severa. As equipes deixam de ser
+                    divididas por tecnologia (time de banco, time de frontend) e passam a ser organizadas por produto
+                    (equipes multidisciplinares). A equipe assume a responsabilidade do código até a produção ("you
+                    build it, you run it").</li>
+                <li class="lang-en"><strong>Team:</strong> Requires a severe cultural shift. Teams are no longer divided
+                    by technology (DB team, frontend team) and are organized by product (cross-functional teams). The
+                    team takes responsibility from code to production ("you build it, you run it").</li>
+                <li class="lang-pt"><strong>Riscos:</strong> O maior risco migra do código para a infraestrutura. Quedas
+                    de rede, falhas de segurança na comunicação entre serviços e a falta de uma governança madura de
+                    DevOps podem travar completamente o desenvolvimento do projeto.</li>
+                <li class="lang-en"><strong>Risks:</strong> The biggest risk shifts from code to infrastructure. Network
+                    outages, security flaws in communication between services, and the lack of mature DevOps governance
+                    can completely stall the project's development.</li>
             </ul>
 
             <a href="https://martinfowler.com/articles/microservices.html" target="_blank" class="link-original">

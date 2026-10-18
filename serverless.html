@@ -30,35 +30,76 @@
 
             <h3 class="lang-pt">Resumo da Ideia Central</h3>
             <h3 class="lang-en">Core Idea Summary</h3>
-            <p class="lang-pt">Aplicações que dependem de serviços na nuvem (BaaS) ou executam código em contêineres
-                efêmeros (FaaS), sem gestão de servidores.</p>
-            <p class="lang-en">Applications relying on cloud services (BaaS) or running code in ephemeral containers
-                (FaaS), without server management.</p>
+            <p class="lang-pt">A arquitetura Serverless (Computação Sem Servidor) não significa que os servidores
+                deixaram de existir, mas sim que a responsabilidade de provisionar, gerenciar, atualizar e escalar
+                máquinas virtuais ou físicas foi totalmente transferida para o provedor de nuvem (como AWS, Google Cloud
+                ou Azure). Esse modelo divide-se em duas abordagens: BaaS (Backend as a Service), usando serviços
+                robustos de terceiros como o Firebase para autenticação e banco de dados; e FaaS (Function as a
+                Service), onde os desenvolvedores escrevem pequenos trechos de código que são executados em contêineres
+                efêmeros apenas quando um evento específico ocorre (como um clique ou upload de arquivo).</p>
+            <p class="lang-en">Serverless architecture doesn't mean servers no longer exist, but rather that the
+                responsibility of provisioning, managing, updating, and scaling virtual or physical machines has been
+                entirely transferred to the cloud provider (like AWS, Google Cloud, or Azure). This model is divided
+                into two approaches: BaaS (Backend as a Service), using robust third-party services like Firebase for
+                authentication and databases; and FaaS (Function as a Service), where developers write small pieces of
+                code that run in ephemeral containers only when a specific event occurs (like a click or file upload).
+            </p>
 
             <h3 class="lang-pt">Vantagens e Desvantagens</h3>
             <h3 class="lang-en">Pros & Cons</h3>
             <ul>
-                <li class="lang-pt"><strong>Vantagens:</strong> Foco total na lógica de negócio e escalabilidade nativa
-                    (escala a zero).</li>
-                <li class="lang-en"><strong>Pros:</strong> Total focus on business logic and native scalability (scale
-                    to zero).</li>
-                <li class="lang-pt"><strong>Desvantagens:</strong> Vendor lock-in e "cold starts".</li>
-                <li class="lang-en"><strong>Cons:</strong> Vendor lock-in and cold starts.</li>
+                <li class="lang-pt"><strong>Vantagens:</strong> O tempo dos desenvolvedores passa a ser focado quase
+                    100% na criação de lógica de negócio e entrega de valor, ignorando atualizações de sistema
+                    operacional ou gerenciamento de disco. A escalabilidade é elástica, automática e nativa: o sistema
+                    suporta desde zero requisições até milhões por segundo, cobrando exatamente pelos milissegundos de
+                    execução da CPU.</li>
+                <li class="lang-en"><strong>Pros:</strong> Developers' time is focused almost 100% on creating business
+                    logic and delivering value, ignoring OS updates or disk management. Scalability is elastic,
+                    automatic, and native: the system can handle from zero requests to millions per second, billing
+                    exactly for CPU execution milliseconds.</li>
+                <li class="lang-pt"><strong>Desvantagens:</strong> O maior problema técnico é o chamado "Cold Start"
+                    (partida fria), que gera latência e lentidão quando uma função que estava inativa há muito tempo
+                    precisa ser "acordada". Além disso, recriar o ambiente arquitetural de produção localmente na
+                    máquina do desenvolvedor para a realização de testes é extremamente difícil.</li>
+                <li class="lang-en"><strong>Cons:</strong> The biggest technical problem is the "Cold Start", which
+                    generates latency and sluggishness when a function that has been inactive for a long time needs to
+                    be "woken up". Furthermore, recreating the production architectural environment locally on the
+                    developer's machine for testing is extremely difficult.</li>
             </ul>
 
             <h3 class="lang-pt">Impacto na Gestão do Projeto</h3>
             <h3 class="lang-en">Impact on Project Management</h3>
             <ul class="impact-list">
-                <li class="lang-pt"><strong>Prazo:</strong> Acelera dramaticamente o lançamento inicial.</li>
-                <li class="lang-en"><strong>Timeframe:</strong> Dramatically accelerates initial launch.</li>
-                <li class="lang-pt"><strong>Custo:</strong> Altamente variável. Barato no início, imprevisível em picos.
+                <li class="lang-pt"><strong>Prazo:</strong> Acelera de forma agressiva a criação de Provas de Conceito
+                    (PoCs) e o lançamento das primeiras versões de um projeto (MVPs). Pula-se toda a etapa morosa de
+                    aprovisionamento de rede e máquinas virtuais.</li>
+                <li class="lang-en"><strong>Timeframe:</strong> Aggressively accelerates the creation of Proof of
+                    Concepts (PoCs) and the launch of the first versions of a project (MVPs). The time-consuming stage
+                    of provisioning networks and virtual machines is skipped entirely.</li>
+                <li class="lang-pt"><strong>Custo:</strong> Muda o paradigma financeiro de CapEx (investimentos prévios
+                    fixos em capacidade de servidor) para OpEx (despesas operacionais baseadas no uso real). Projetos em
+                    início de vida ou com pouco tráfego podem custar literalmente zero reais por mês. O risco financeiro
+                    ocorre apenas caso haja ataques maliciosos ou códigos em loop que disparem o custo variável de forma
+                    desenfreada.</li>
+                <li class="lang-en"><strong>Cost:</strong> Shifts the financial paradigm from CapEx (fixed upfront
+                    investments in server capacity) to OpEx (operational expenses based on actual usage). Early-stage or
+                    low-traffic projects can cost literally zero dollars a month. Financial risk only occurs in cases of
+                    malicious attacks or looping code that triggers uncontrolled variable costs.</li>
+                <li class="lang-pt"><strong>Equipe:</strong> Reduz drasticamente a necessidade de incluir profissionais
+                    dedicados à infraestrutura e administração de sistemas (SysAdmins/Analistas de Infra) na folha de
+                    pagamento do projeto.</li>
+                <li class="lang-en"><strong>Team:</strong> Drastically reduces the need to include dedicated
+                    infrastructure and systems administration professionals (SysAdmins/Infrastructure Analysts) on the
+                    project's payroll.</li>
+                <li class="lang-pt"><strong>Riscos:</strong> O principal risco arquitetural e de negócios é o "Vendor
+                    Lock-in" (aprisionamento tecnológico). Como o código é desenvolvido utilizando bibliotecas e
+                    gatilhos extremamente específicos da nuvem escolhida (ex: AWS Lambda), migrar o projeto inteiro para
+                    o Google Cloud ou Azure futuramente custaria quase o mesmo esforço de reescrever o sistema do zero.
                 </li>
-                <li class="lang-en"><strong>Cost:</strong> Highly variable. Cheap initially, unpredictable in spikes.
-                </li>
-                <li class="lang-pt"><strong>Equipe:</strong> Reduz a necessidade de SysAdmins/Operações.</li>
-                <li class="lang-en"><strong>Team:</strong> Reduces the need for SysAdmins/Ops.</li>
-                <li class="lang-pt"><strong>Riscos:</strong> Aprisionamento ao provedor de nuvem.</li>
-                <li class="lang-en"><strong>Risks:</strong> Cloud provider lock-in.</li>
+                <li class="lang-en"><strong>Risks:</strong> The main architectural and business risk is "Vendor
+                    Lock-in". Since the code is developed using highly specific libraries and triggers from the chosen
+                    cloud (e.g., AWS Lambda), migrating the entire project to Google Cloud or Azure in the future would
+                    require almost as much effort as rewriting the system from scratch.</li>
             </ul>
 
             <a href="https://martinfowler.com/articles/serverless.html" target="_blank" class="link-original">
