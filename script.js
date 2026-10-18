@@ -1,39 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const html = document.documentElement;
     const themeToggleBtn = document.getElementById('theme-toggle');
     const langToggleBtn = document.getElementById('lang-toggle');
 
-    // --- Lógica de Tema (Dark/Light) ---
+    // Configura Tema Inicial
     const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-    }
+    if (currentTheme) html.setAttribute('data-theme', currentTheme);
 
+    // Configura Idioma Inicial (Força pt-BR se não houver salvo)
+    const currentLang = localStorage.getItem('lang') || 'pt-BR';
+    html.setAttribute('lang', currentLang);
+
+    // Botão de Tema
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            if (theme === 'dark') {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            }
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
         });
     }
 
-    // --- Lógica de Idioma (PT/EN) ---
-    const currentLang = localStorage.getItem('lang') || 'lang-pt';
-    document.body.className = currentLang;
-
+    // Botão de Idioma
     if (langToggleBtn) {
         langToggleBtn.addEventListener('click', () => {
-            if (document.body.classList.contains('lang-pt')) {
-                document.body.className = 'lang-en';
-                localStorage.setItem('lang', 'lang-en');
-            } else {
-                document.body.className = 'lang-pt';
-                localStorage.setItem('lang', 'lang-pt');
-            }
+            const isPt = html.getAttribute('lang') === 'pt-BR';
+            const newLang = isPt ? 'en' : 'pt-BR';
+            html.setAttribute('lang', newLang);
+            localStorage.setItem('lang', newLang);
         });
     }
 });

@@ -4,21 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsserviços / Microservices</title>
+    <title>Microsserviços</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="lang-pt">
+<body>
     <header>
         <div class="container">
             <h1 class="lang-pt">Eixo 1: Microsserviços</h1>
             <h1 class="lang-en">Axis 1: Microservices</h1>
 
-            <a href="index.html" class="btn">
-                <span class="lang-pt">← Voltar à Página Inicial</span>
-                <span class="lang-en">← Back to Home Page</span>
-            </a>
-            <button id="lang-toggle" class="btn">EN / PT-BR</button>
+            <div class="controls">
+                <a href="index.html" class="btn">
+                    <span class="lang-pt">← Voltar</span>
+                    <span class="lang-en">← Back</span>
+                </a>
+                <button id="lang-toggle" class="btn">EN / PT-BR</button>
+            </div>
         </div>
     </header>
 
@@ -28,61 +30,42 @@
 
             <h3 class="lang-pt">Resumo da Ideia Central</h3>
             <h3 class="lang-en">Core Idea Summary</h3>
-
             <p class="lang-pt">O estilo arquitetural de microsserviços consiste em desenvolver uma única aplicação como
-                um conjunto de pequenos serviços. Cada serviço é executado em seu próprio processo, focado em uma
-                capacidade de negócio específica e se comunica por meio de mecanismos leves. Possuem implantação
-                (deploy) independente e gerenciamento de dados descentralizado.</p>
+                um conjunto de pequenos serviços autônomos e focados em negócios específicos.</p>
             <p class="lang-en">The microservices architectural style consists of developing a single application as a
-                suite of small services. Each service runs in its own process, focused on a specific business
-                capability, and communicates via lightweight mechanisms. They have independent deployment and
-                decentralized data management.</p>
+                suite of small, autonomous services focused on specific business capabilities.</p>
 
             <h3 class="lang-pt">Vantagens e Desvantagens</h3>
-            <h3 class="lang-en">Advantages and Disadvantages</h3>
-
+            <h3 class="lang-en">Pros & Cons</h3>
             <ul>
-                <li class="lang-pt"><strong>Vantagens:</strong> Escalabilidade direcionada (escala-se apenas o serviço
-                    necessário), independência tecnológica e ciclos de publicação mais rápidos e independentes.</li>
-                <li class="lang-en"><strong>Advantages:</strong> Targeted scalability (only the necessary service is
-                    scaled), technological independence, and faster, independent deployment cycles.</li>
-
-                <li class="lang-pt"><strong>Desvantagens:</strong> Alta complexidade operacional no gerenciamento de
-                    sistemas distribuídos, dificuldade em manter a consistência dos dados e necessidade imperativa de
-                    automação madura (DevOps).</li>
-                <li class="lang-en"><strong>Disadvantages:</strong> High operational complexity in managing distributed
-                    systems, difficulty in maintaining data consistency, and an imperative need for mature automation
-                    (DevOps).</li>
+                <li class="lang-pt"><strong>Vantagens:</strong> Escalabilidade direcionada, independência tecnológica e
+                    ciclos rápidos.</li>
+                <li class="lang-en"><strong>Pros:</strong> Targeted scalability, technological independence, and fast
+                    cycles.</li>
+                <li class="lang-pt"><strong>Desvantagens:</strong> Complexidade em sistemas distribuídos e necessidade
+                    de automação madura.</li>
+                <li class="lang-en"><strong>Cons:</strong> Complexity in distributed systems and the need for mature
+                    automation.</li>
             </ul>
 
             <h3 class="lang-pt">Impacto na Gestão do Projeto</h3>
             <h3 class="lang-en">Impact on Project Management</h3>
-
             <ul class="impact-list">
-                <li class="lang-pt"><strong>Prazo:</strong> O tempo de configuração inicial é maior, mas a longo prazo
-                    permite entregas mais rápidas, já que equipes paralelas não se bloqueiam.</li>
-                <li class="lang-en"><strong>Timeframe:</strong> The initial setup time is higher, but in the long run it
-                    allows for faster deliveries, as parallel teams do not block each other's work.</li>
-
-                <li class="lang-pt"><strong>Custo:</strong> Aumenta os custos com infraestrutura (múltiplos contêineres)
-                    e exige investimento em ferramentas de monitoramento.</li>
-                <li class="lang-en"><strong>Cost:</strong> Increases infrastructure costs (multiple containers) and
-                    requires investment in robust monitoring tools.</li>
-
-                <li class="lang-pt"><strong>Equipe:</strong> Requer equipes multidisciplinares e autônomas. Cada equipe
-                    assume a criação e operação do seu serviço.</li>
-                <li class="lang-en"><strong>Team:</strong> Requires cross-functional and autonomous teams. Each team
-                    assumes the creation and operation of their service.</li>
-
-                <li class="lang-pt"><strong>Riscos:</strong> Elevados associados a falhas de comunicação na rede,
-                    latência e integração.</li>
-                <li class="lang-en"><strong>Risks:</strong> High risks associated with network communication failures,
-                    latency, and integration.</li>
+                <li class="lang-pt"><strong>Prazo:</strong> Setup inicial maior, mas entregas futuras mais rápidas por
+                    não haver bloqueio entre equipes.</li>
+                <li class="lang-en"><strong>Timeframe:</strong> Higher initial setup, but faster future deliveries due
+                    to unblocked parallel teams.</li>
+                <li class="lang-pt"><strong>Custo:</strong> Aumento em infraestrutura e monitoramento.</li>
+                <li class="lang-en"><strong>Cost:</strong> Increase in infrastructure and monitoring.</li>
+                <li class="lang-pt"><strong>Equipe:</strong> Exige times multidisciplinares e altamente autônomos.</li>
+                <li class="lang-en"><strong>Team:</strong> Requires cross-functional, highly autonomous teams.</li>
+                <li class="lang-pt"><strong>Riscos:</strong> Falhas de rede e latência.</li>
+                <li class="lang-en"><strong>Risks:</strong> Network failures and latency.</li>
             </ul>
 
             <a href="https://martinfowler.com/articles/microservices.html" target="_blank" class="link-original">
-                <span class="lang-pt">🔗 Ler o post original de Martin Fowler</span>
-                <span class="lang-en">🔗 Read the original post by Martin Fowler</span>
+                <span class="lang-pt">🔗 Ler post original</span>
+                <span class="lang-en">🔗 Read original post</span>
             </a>
         </article>
     </main>

@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="lang-pt">
+<body>
     <header>
         <div class="container">
             <h1 class="lang-pt">Eixo 2: Fronteiras e Evolução</h1>
-            <h1 class="lang-en">Axis 2: Boundaries and Evolution</h1>
+            <h1 class="lang-en">Axis 2: Boundaries</h1>
 
-            <a href="index.html" class="btn">
-                <span class="lang-pt">← Voltar à Página Inicial</span>
-                <span class="lang-en">← Back to Home Page</span>
-            </a>
-            <button id="lang-toggle" class="btn">EN / PT-BR</button>
+            <div class="controls">
+                <a href="index.html" class="btn">
+                    <span class="lang-pt">← Voltar</span>
+                    <span class="lang-en">← Back</span>
+                </a>
+                <button id="lang-toggle" class="btn">EN / PT-BR</button>
+            </div>
         </div>
     </header>
 
@@ -28,57 +30,37 @@
 
             <h3 class="lang-pt">Resumo da Ideia Central</h3>
             <h3 class="lang-en">Core Idea Summary</h3>
-
-            <p class="lang-pt">Os Micro Frontends estendem os conceitos de microsserviços à camada de interface. Em vez
-                de construir uma aplicação web monolítica pesada, a interface é fragmentada em pedaços independentes,
-                que podem ser desenvolvidos e publicados por equipes distintas.</p>
-            <p class="lang-en">Micro Frontends extend the concepts of microservices to the user interface layer. Instead
-                of building a heavy monolithic web application, the interface is fragmented into independent pieces,
-                which can be developed and deployed by different teams.</p>
+            <p class="lang-pt">Estende os conceitos de microsserviços à interface do usuário, fragmentando o frontend em
+                pedaços independentes gerenciados por times distintos.</p>
+            <p class="lang-en">Extends microservices concepts to the UI, fragmenting the frontend into independent
+                pieces managed by different teams.</p>
 
             <h3 class="lang-pt">Vantagens e Desvantagens</h3>
-            <h3 class="lang-en">Advantages and Disadvantages</h3>
-
+            <h3 class="lang-en">Pros & Cons</h3>
             <ul>
-                <li class="lang-pt"><strong>Vantagens:</strong> Código-fonte menor, atualizações independentes, e
-                    possibilidade de modernizar gradualmente um sistema legado.</li>
-                <li class="lang-en"><strong>Advantages:</strong> Smaller source code, independent updates, and the
-                    possibility of gradually modernizing a legacy system.</li>
-
-                <li class="lang-pt"><strong>Desvantagens:</strong> Possível duplicação de dependências, complexidade em
-                    compartilhar o estado global da aplicação e risco de fragmentação visual.</li>
-                <li class="lang-en"><strong>Disadvantages:</strong> Possible duplication of dependencies, complexity in
-                    sharing the global state of the application, and risk of visual fragmentation.</li>
+                <li class="lang-pt"><strong>Vantagens:</strong> Código menor e modernização gradual.</li>
+                <li class="lang-en"><strong>Pros:</strong> Smaller code and gradual modernization.</li>
+                <li class="lang-pt"><strong>Desvantagens:</strong> Duplicação de dependências e risco de UX
+                    inconsistente.</li>
+                <li class="lang-en"><strong>Cons:</strong> Dependency duplication and risk of inconsistent UX.</li>
             </ul>
 
             <h3 class="lang-pt">Impacto na Gestão do Projeto</h3>
             <h3 class="lang-en">Impact on Project Management</h3>
-
             <ul class="impact-list">
-                <li class="lang-pt"><strong>Prazo:</strong> Acelera a entrega das funcionalidades, eliminando gargalos
-                    de uma única equipe de interface.</li>
-                <li class="lang-en"><strong>Timeframe:</strong> Accelerates feature delivery, eliminating bottlenecks of
-                    a single interface team.</li>
-
-                <li class="lang-pt"><strong>Custo:</strong> Pode introduzir custos adicionais (overhead) na criação da
-                    estrutura base e na governança.</li>
-                <li class="lang-en"><strong>Cost:</strong> May introduce overhead costs in creating the base structure
-                    and in governance.</li>
-
-                <li class="lang-pt"><strong>Equipe:</strong> Permite a estruturação em equipes verticais (de ponta a
-                    ponta), do backend até a interface.</li>
-                <li class="lang-en"><strong>Team:</strong> Allows structuring into vertical (end-to-end) teams, from
-                    backend to interface.</li>
-
-                <li class="lang-pt"><strong>Riscos:</strong> Riscos inerentes à experiência do usuário (UX
-                    inconsistente) e problemas de desempenho no navegador.</li>
-                <li class="lang-en"><strong>Risks:</strong> Inherent risks to user experience (inconsistent UX) and
-                    browser performance issues.</li>
+                <li class="lang-pt"><strong>Prazo:</strong> Acelera o time-to-market.</li>
+                <li class="lang-en"><strong>Timeframe:</strong> Accelerates time-to-market.</li>
+                <li class="lang-pt"><strong>Custo:</strong> Custos de overhead na criação do shell app.</li>
+                <li class="lang-en"><strong>Cost:</strong> Overhead costs in shell app creation.</li>
+                <li class="lang-pt"><strong>Equipe:</strong> Estrutura vertical "de ponta a ponta".</li>
+                <li class="lang-en"><strong>Team:</strong> End-to-end vertical structure.</li>
+                <li class="lang-pt"><strong>Riscos:</strong> Problemas de performance no navegador.</li>
+                <li class="lang-en"><strong>Risks:</strong> Browser performance issues.</li>
             </ul>
 
             <a href="https://martinfowler.com/articles/micro-frontends.html" target="_blank" class="link-original">
-                <span class="lang-pt">🔗 Ler o post original de Martin Fowler</span>
-                <span class="lang-en">🔗 Read the original post by Martin Fowler</span>
+                <span class="lang-pt">🔗 Ler post original</span>
+                <span class="lang-en">🔗 Read original post</span>
             </a>
         </article>
     </main>
